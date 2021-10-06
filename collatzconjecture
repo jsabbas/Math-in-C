@@ -1,0 +1,12 @@
+int collatz(int n)
+{
+    //base case
+    if (n==1)
+        return 0;
+    //even numbers n mod 2 (if divided by 2, no remainder)
+    else if ((n % 2) == 0)
+        return 1 + collatz (n/2);
+    //odd numbers 3x+1
+    else
+        return 1 + collatz(3*n + 1);
+}
